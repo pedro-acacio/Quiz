@@ -1,21 +1,21 @@
 # Quiz
 
-Protótipo de um jogo de perguntas e respostas em [p5.js](https://p5js.org/), com integração planejada com o Firebase Realtime Database. O projeto está incompleto: hoje existe apenas uma pergunta fixa (uma charada) renderizada na tela e os campos de nome/resposta, mas o botão "Enviar" não processa a resposta (a lógica está comentada no código) e a classe `Contestant` ainda está vazia.
+Prototype of a quiz game in [p5.js](https://p5js.org/), with a planned integration with the Firebase Realtime Database. The project is incomplete: right now there is only a single hard-coded question (a riddle) rendered on screen along with the name/answer fields, but the "Enviar" (Submit) button doesn't process the answer (the logic is commented out in the code) and the `Contestant` class is still empty.
 
-## Tecnologias
+## Technologies
 
-- p5.js e p5.dom (via CDN) para desenho e elementos de UI
-- p5.play.js incluído no repositório
-- Firebase (app + realtime-database, via CDN) configurado em `index.html`, mas com a inicialização parcialmente comentada
+- p5.js and p5.dom (via CDN) for drawing and UI elements
+- p5.play.js included in the repository
+- Firebase (app + realtime-database, via CDN) configured in `index.html`, but with the initialization partially commented out
 
-## Estrutura
+## Structure
 
-- `sketch.js` — `setup()`/`draw()` do p5.js, cria o canvas e instancia `Quiz`
-- `js/Quiz.js` — classe que inicia a exibição da pergunta
-- `js/Question.js` — cria os elementos DOM da pergunta, opções e formulário de resposta
-- `js/Contestant.js` — classe vazia (esqueleto ainda não implementado)
-- `p5.play.js` — biblioteca de sprites do p5
+- `sketch.js` — p5.js `setup()`/`draw()`, creates the canvas and instantiates `Quiz`
+- `js/Quiz.js` — class that starts displaying the question
+- `js/Question.js` — creates the DOM elements for the question, options and answer form
+- `js/Contestant.js` — empty class (skeleton not yet implemented)
+- `p5.play.js` — p5 sprite library
 
-## Como rodar
+## How to run
 
-Abra `index.html` diretamente no navegador ou sirva a pasta com um servidor estático (ex: `npx serve .`). Não há build nem `package.json` — todas as dependências são carregadas via `<script>` no HTML.
+Open `index.html` directly in the browser or serve the folder with a static server (e.g. `npx serve .`). There is no build step or `package.json` — all dependencies are loaded via `<script>` tags in the HTML.
